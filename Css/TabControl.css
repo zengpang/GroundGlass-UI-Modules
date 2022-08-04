@@ -1,0 +1,8 @@
+.tabContent{
+    width: 600px;
+    height: 300px;
+    background-color: rgb(187, 208, 208);
+    justify-self: center;
+    position: absolute;
+    top: 10%;
+}
