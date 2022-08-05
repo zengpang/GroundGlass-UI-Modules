@@ -1,0 +1,49 @@
+.container{
+    width: 900px;
+    height: 400px;
+    background-color: rgba(226, 223, 223, 0.327);
+    justify-self: center;
+    align-self: center;
+ 
+    border-radius: 30px;
+    
+}
+
+/*非兼容，效果最好 Uncompatibility*/
+.GroundGlassUnCB
+{
+    backdrop-filter: blur(32px);
+}
+
+/*兼容性最好 compatibility*/
+.GroundGlassCB
+{
+    overflow: hidden;
+    z-index: 10; 
+}
+.GroundGlassCB::before{
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    right: -100px;
+    bottom: -100px;
+    background-image: url("/Images/bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    filter: blur(32px);
+    z-index: -1;
+}
+.GroundGlassCB::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: rgba(226, 223, 223, 0.452);
+}
+
+
