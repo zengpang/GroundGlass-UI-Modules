@@ -1,0 +1,67 @@
+.container{
+    
+    display: grid;
+    grid-template-rows: 60px auto auto auto auto ;
+    grid-template-columns: 100%;
+    color: white;
+}
+.container h2{
+    font-size: 19px;
+    margin: 0px;
+    margin-top: 3%;
+    margin-left: 3%;
+    
+}
+.collapseItem{
+    align-self: center;
+    font-size: 18px;
+    margin-left: 3%;
+    margin-right: 3%; 
+    display: grid;
+    overflow: hidden;
+    grid-template-rows: auto auto;
+    position: relative;
+    
+}
+.itemContent
+{
+    height: 0px;
+    margin-top: 15px;
+    border-radius: 15px;
+    font-size: 16px;
+    transition: all .3s;
+    background-color: rgba(255, 255, 255, 0.326);
+}
+.itemContent>p{
+    margin: 10px;
+}
+.unfold
+{
+    height: 80px;
+}
+.itemHeader
+{
+    display: flex;
+    
+}
+.itemHeader span:first-child
+{
+    font-family: "iconfont";
+    margin-right: 13px;
+}
+.arrows
+{
+    position: absolute;
+    right: 1%;
+    width: 9px;
+    height: 9px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
+    transition: all .3s;
+    align-self: center;
+}
+.btnunfold
+{
+    transform: rotate(135deg) ;
+}
