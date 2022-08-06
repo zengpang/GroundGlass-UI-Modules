@@ -1,0 +1,75 @@
+.container {
+    height: 80px;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
+}
+
+.container>div {
+    display: flex;
+}
+
+.container>div>.messageBtn {
+    width: 60%;
+    height: 60%;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    align-self: center;
+    margin: auto;
+    color: white;
+    background-color: #20c99f00;
+    transition: all .4s;
+}
+
+.message {
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #20c99f;
+    position: absolute;
+    font-size: 16px;
+    left: 45%;
+    display: flex;
+    color: white;
+    transform: translate(0%, -50px);
+    box-shadow:
+        2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+    text-align: center;
+    opacity: 0;
+    transition: all .4s;
+}
+.message>p{
+    height: 20px;
+    margin: auto;
+}
+.message>p>span{
+    font-family: "iconfont";
+    font-size: 17px;
+    margin-right: 12px;
+    
+}
+.icon-message:before {
+    content: "\e86f";
+}
+  
+.icon-sucess:before {
+    content: "\e909";
+}
+.icon-fail:before {
+  content: "\e675";
+}
+.icon-warning:before{
+    content: "\ec72";
+}
+.message.show
+{
+    transform: translate(0%, 50px);
+    opacity: 1;
+}
