@@ -27,7 +27,7 @@
     left: -100px;
     right: -100px;
     bottom: -100px;
-    background-image: url("/Images/bg.jpg");
+    background-image: url("../Images/bg.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
