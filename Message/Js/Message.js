@@ -67,7 +67,7 @@ class Message{
     bind()
     {
         setTimeout(()=>this.show());
-        setTimeout(()=>this.destory(),4000);
+        setTimeout(()=>this.destory(),3000);
 
     }
     show()
