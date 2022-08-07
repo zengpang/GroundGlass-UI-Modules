@@ -1,0 +1,113 @@
+.container {
+    height: 80px;
+    border-radius: 30px;
+    display: grid;
+    position: relative;
+    grid-template-columns: auto auto auto auto;
+
+}
+.container>div {
+    display: flex;
+    position: relative;
+}
+
+.container>div>.tooltipBtn {
+    width: 60%;
+    height: 60%;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    align-self: center;
+    margin: auto;
+    color: white;
+    background-color: #20c99f00;
+    transition: all .4s;
+ 
+}
+.toolTip{
+    position: absolute;
+    z-index: 10;
+    background-color: black;
+    display: none;
+    white-space: nowrap;
+    padding: 3px 6px;
+    border-radius: 4px;
+    text-align: center;
+    transition: all .3s;
+    box-shadow:
+    2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+.toolTip.show{
+    display: block;
+}
+.toolTip.top{
+    
+    bottom: calc(80% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.toolTip.bottom{
+    top: calc(80% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.toolTip.left{
+    top: calc(35% + 10px);
+    left: -37%;
+    transform: translateY(-50%);
+}
+.toolTip.right{
+    top: calc(35% + 10px);
+    right: -37%;
+    transform: translateY(-50%);
+}
+.toolTip.top::before{
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    bottom:-37%;
+    left: 43%;
+    border: 6px solid transparent;
+    border-top-color:black ;
+}
+.toolTip.right::before{
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    top:32%;
+    left: -10%;
+    border: 6px solid transparent;
+    border-right-color:black ;
+}
+.toolTip.bottom::before{
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    top:-37%;
+    left: 43%;
+    border: 6px solid transparent;
+    border-bottom-color:black ;
+}
+.toolTip.left::before{
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    top:32%;
+    right: -10%;
+    border: 6px solid transparent;
+    border-left-color:black ;
+}
+.show{
+    display: block;
+}
+
+
