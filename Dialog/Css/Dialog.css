@@ -1,15 +1,16 @@
 
 .container{
-    width:200px ;
-    height: 60px;
+    width:250px ;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .DialogBtn{
-    width: 150px;
-    height: 40px;
+    width: 200px;
+    height: 48px;
     border: 0px;
+    font-size: 17px;
     border-radius: 25px;
     color: white;
     background-color: #20c99f00;
@@ -62,37 +63,37 @@
 
 @keyframes DialogShow{
    0%{
-    width: 10px;
-    height: 30px;
+    width: 15px;
+    height: 45px;
     top: -5%;
     transform: rotate(90deg);
   
    }
    50%{
-    width: 10px;
-    height: 30px;
+    width: 15px;
+    height: 45px;
     top: 25%;
     transform: rotate(360deg);
    }
    100%{
-    width: 240px;
-    height: 270px;
+    width: 350px;
+    height: 400px;
    }
 }
 @keyframes DialogClose{
     0%{
-        width: 240px;
-        height: 270px;
+        width: 300px;
+        height: 340px;
        }
        50%{
-        width: 10px;
-        height: 30px;
+        width: 15px;
+        height: 45px;
         top: 25%;
         transform: rotate(360deg);
        }
        100%{
-        width: 10px;
-        height: 30px;
+        width: 15px;
+        height: 45px;
         top: -5%;
         transform: rotate(90deg);
         
@@ -111,13 +112,13 @@
 .title{
     position: relative;
     align-self: center;
-    margin-left: 15px;
-    font-size: 20px;
+    margin-left: 20px;
+    font-size: 23px;
     font-weight: bolder;
   
 }
 .title span{
-    font-size: 23px;
+    font-size: 26px;
 }
 .title .DialogCloseBtn{
     position: absolute;
@@ -137,7 +138,7 @@
     content:"";
     position: absolute;
     display: block;
-    width: 12px;
+    width: 20px;
     height: 1.5px;
     background: rgb(255, 255, 255);
     transform: rotate(45deg);
@@ -146,11 +147,11 @@
     transform: rotate(-45deg);
 }
 .content{
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
     background-color: rgba(255, 255, 255, 0.326);
-    padding: 15px;
-    font-size: 16px;
+    padding: 10px;
+    font-size: 18px;
     border-radius: 15px;
 }
 .buttons{
@@ -161,13 +162,14 @@
     align-items: center;
     justify-items: center;
     grid-template-columns: auto auto;
-    font-size: 17px;
+    
 }
 .buttons button{
     width: 70%;
     height: 100%;
     border: 0px;
-    border-radius:3px ;
+    border-radius:10px ;
+    font-size: 18px;
     transition: all .4s;
 }
 .buttons .ok{
@@ -187,7 +189,7 @@
     20.9px 26.3px 33.4px rgba(0, 0, 0, 0.072),
     50px 63px 80px rgba(0, 0, 0, 0.1)
   ;
-  font-size: 18px;
+  font-size: 22px;
   width: 75%;
   height: 110%;
 }
