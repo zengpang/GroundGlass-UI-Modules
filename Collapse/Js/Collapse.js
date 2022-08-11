@@ -5,13 +5,10 @@ class Collapse{
       this.$container=$container;
       this.$$arrows=$container.querySelectorAll(`.arrows`);
       this.$$itemContents=$container.querySelectorAll(`.itemContent`);
-      this.init();
+     
       this.bind();
     }
-    init()
-    {
-
-    }
+ 
     bind()
     {
         this.$container.addEventListener("click", (event)=>{

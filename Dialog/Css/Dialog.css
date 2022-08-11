@@ -1,0 +1,194 @@
+
+.container{
+    width:200px ;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.DialogBtn{
+    width: 150px;
+    height: 40px;
+    border: 0px;
+    border-radius: 25px;
+    color: white;
+    background-color: #20c99f00;
+    transition: all .4s;
+    cursor: pointer;
+}
+.DialogBtn.show{
+    background-color: #20c99f;
+}
+.DialogShade{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    z-index: 10;
+    background-color: rgba(4, 4, 4, 0);
+}
+.DialogShade.show{
+    visibility: visible;
+}
+.Dialog{
+   width: 10px;
+   height: 30px;
+   position: fixed;
+   top: 25%;
+   color: white;
+   transform: rotate(360deg);
+   background-color: rgba(226, 223, 223, 0.327);
+   border-radius: 15px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   box-shadow:
+   2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+   6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+   12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+   22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+   41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+   100px 100px 80px rgba(0, 0, 0, 0.07);
+   animation-duration:3s ;
+   animation-fill-mode: both;
+   animation-play-state: paused; 
+   display: grid;
+   grid-template-rows: 15% 60% 25%;
+  
+}
+
+@keyframes DialogShow{
+   0%{
+    width: 10px;
+    height: 30px;
+    top: -5%;
+    transform: rotate(90deg);
+  
+   }
+   50%{
+    width: 10px;
+    height: 30px;
+    top: 25%;
+    transform: rotate(360deg);
+   }
+   100%{
+    width: 240px;
+    height: 270px;
+   }
+}
+@keyframes DialogClose{
+    0%{
+        width: 240px;
+        height: 270px;
+       }
+       50%{
+        width: 10px;
+        height: 30px;
+        top: 25%;
+        transform: rotate(360deg);
+       }
+       100%{
+        width: 10px;
+        height: 30px;
+        top: -5%;
+        transform: rotate(90deg);
+        
+       }
+}
+.title,.content,.buttons{
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s;
+   
+ }
+ .title.show,.content.show,.buttons.show{
+     opacity: 1;
+     visibility: visible;
+ }
+.title{
+    position: relative;
+    align-self: center;
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: bolder;
+  
+}
+.title span{
+    font-size: 23px;
+}
+.title .DialogCloseBtn{
+    position: absolute;
+    right: 5%;
+    top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    transition: all .4s;
+}
+.title .DialogCloseBtn::before,
+.title .DialogCloseBtn::after{
+    content:"";
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 1.5px;
+    background: rgb(255, 255, 255);
+    transform: rotate(45deg);
+}
+.title .DialogCloseBtn::after{
+    transform: rotate(-45deg);
+}
+.content{
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.326);
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 15px;
+}
+.buttons{
+    align-self: center;
+    display: grid;
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: auto auto;
+    font-size: 17px;
+}
+.buttons button{
+    width: 70%;
+    height: 100%;
+    border: 0px;
+    border-radius:3px ;
+    transition: all .4s;
+}
+.buttons .ok{
+   background-color: rgb(32, 201, 159);
+   color: white;
+}
+.buttons .cancel{
+  background-color: #FEC1E0;
+  color:#FF3394;
+}
+.buttons .selected{   
+    box-shadow:
+    1.4px 1.7px 2.2px rgba(0, 0, 0, 0.028),
+    3.3px 4.2px 5.3px rgba(0, 0, 0, 0.04),
+    6.3px 7.9px 10px rgba(0, 0, 0, 0.05),
+    11.2px 14.1px 17.9px rgba(0, 0, 0, 0.06),
+    20.9px 26.3px 33.4px rgba(0, 0, 0, 0.072),
+    50px 63px 80px rgba(0, 0, 0, 0.1)
+  ;
+  font-size: 18px;
+  width: 75%;
+  height: 110%;
+}
+
