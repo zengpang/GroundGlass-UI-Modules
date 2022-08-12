@@ -1,0 +1,131 @@
+.container {
+    position: relative;
+}
+.container h1{
+    margin-top: 24px;
+    margin-left: 30px;
+}
+.carousel {
+    width: 93%;
+    height: 73%;
+    position: relative;
+    background-color: rgb(32, 180, 79);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    display: flex;
+}
+
+.carouseItem {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1;
+    transition: all .3s;
+}
+
+.carouseItem:nth-of-type(1) {
+    background-color: coral;
+}
+
+.carouseItem:nth-of-type(2) {
+    background-color: darkviolet;
+}
+
+.carouseItem:nth-of-type(3) {
+    background-color: lightgrey;
+}
+
+.carouseItem:nth-of-type(4) {
+    background-color: rgb(51, 145, 234);
+}
+
+.carouseItem.show {
+    opacity: 1;
+    z-index: 3;
+}
+
+.arrows {
+    position: absolute;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 10;
+
+}
+
+.arrows .arrowBtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(31, 45, 61, .11);
+}
+
+.arrows .arrowBtn.arrow-pre {
+    position: absolute;
+    left: 10px;
+
+}
+
+.arrows .arrowBtn.arrow-next {
+    position: absolute;
+    right: 10px;
+}
+
+.arrows .arrowBtn::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid #fff;
+    border-top: 2px solid #fff;
+    transform: rotate(-45deg);
+}
+
+.arrows .arrowBtn.arrow-next::before {
+    transform: rotate(135deg);
+}
+
+.indicators {
+    position: absolute;
+    color: white;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.indicators>li {
+    display: inline-block;
+    padding: 5px 3px;
+    cursor: pointer;
+    list-style: none;
+
+}
+
+.indicators>li::before {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 2px;
+    border-radius: 2px;
+    background: #c0c4cc;
+    transition: all .3s;
+}
+
+.indicators>li.active::before {
+    background: #fff;
+}
